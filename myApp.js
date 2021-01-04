@@ -64,10 +64,11 @@ app.post('/register', (req, res) =>{
         }
     }
     )
-    let directHome = () =>{
-        return res.sendFile(__dirname + '/view/index.html')
-    }
-    setTimeout(directHome(), 2000);
+    // let directHome = () =>{
+        // return res.sendFile(__dirname + '/view/index.html')
+            res.sendFile(__dirname + '/view/index.html')
+    // }
+    // setTimeout(directHome(), 2000);
 })
 
 
