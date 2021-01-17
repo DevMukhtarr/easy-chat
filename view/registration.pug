@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+  head
+    title Login
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='../styles/register.css')
+  body
+    #main
+     form(action='/register' method='post')
+       div.label Register
+       div.username
+        input(type="text" placeholder="username" name='username' required)
+       div.email
+        input(type="email" placeholder="email" name='email' required)
+       div.password
+        input(type="password" placeholder="password" name='password' required)
+       div.confirm-password
+        input(type="password" placeholder="confirm password" name='confirmPassword' required)
+        p.center#invalid #{invalid}
+       button(type="submit") Register
+            //- h3 or login with
+       div.social
+       p
+        | Already a member
+        a(href="/") Login

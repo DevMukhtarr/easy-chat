@@ -1,5 +1,5 @@
 body {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9KH4lmmv6ieV9ZS2KFFiqHkxpq5cUvalD3Q&usqp=CAU');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsjPkThR5CuKC7QpyMFCTf025sPrlwT72mww&usqp=CAU');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,10 +19,14 @@ body {
     background-color: rgba(60, 89, 107, 0.63);
     width: 40%;
     padding: 30px;
+    border-radius: 5px;
   }
   
+  #invalid{
+    color: #ff0000;
+  }
   .username input,
-  .password input {
+  .password input,.email input,.confirm-password input{
     width: 100%;
     height: 40px;
     border: 0px;
@@ -37,7 +41,7 @@ body {
   }
   
   button {
-    background: rgb(13, 93, 66);
+    background: #63cdda;
     color: #fff;
     border: 0px;
     width: 100%;
@@ -45,10 +49,6 @@ body {
     margin: 5px;
     font-size: 24px;
     cursor: pointer;
-    border-radius: 5px;
-  }
-  button:hover{
-      box-shadow: 2px 2px 20px black;
   }
   
   .checkbox {

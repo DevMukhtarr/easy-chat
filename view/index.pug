@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+  head
+    title Login
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='../styles/login.css')
+  body
+    #main
+     form(action='/register' method='post')
+       div.label login
+       div.username
+        input(type="text" placeholder="username" name='username' required)
+       div.password
+        input(type="password" placeholder="password" name='password' required)
+       div.checkbox
+        input(type='checkbox' name='agreement')
+        |Remember me
+       button(type="submit") login
+            //- h3 or login with
+       div.social
+        //- button(type="button") <i class="fa fa-facebook"></i>
+        //- button(type="button") <i class="fa fa-google-plus"></i>
+       p
+        | not a member
+        a(href="/register") Sign Up now
