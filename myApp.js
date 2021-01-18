@@ -44,10 +44,10 @@ app.get('/register', (req, res) =>{
  
 app.use(session({
     secret: process.env.SESSION_SECRET,
-    resave: false,
+    resave: true,
     saveUninitialized: true,
-    cookie: {secure: true}
-}))
+    // cookie: {secure: true}
+}),passport.initialize(),passport.session())
 
 //serialize user with passport
 passport.serializeUser((user, done) =>{
@@ -92,6 +92,7 @@ app.post('/register', (req,res, next) =>{
             if(req.body.password !== req.body.confirmPassword){
                 res.render(process.cwd() + '/view/registration', {invalid: invalid})
             }else{
+                //hashing the password before sending to the db -->(database)<--
                 const hash = bcrypt.hashSync(req.body.password, 12);
 
                 //creating data to save in db 
@@ -107,7 +108,7 @@ app.post('/register', (req,res, next) =>{
                     }
                 })
 
-                res.render(process.cwd() + '/view/login-success', {username: req.body.username})
+                res.render(process.cwd() + '/view/profile', {username: req.body.username})
             }
         }
     })
@@ -115,19 +116,24 @@ app.post('/register', (req,res, next) =>{
 
 //to login new users
 
-app.post('/login', (req, res, next) =>{
-    User.findOne({username: req.body.username}, (err, user) =>{
-        if(err){
-            next(err)
-        }else if(user){
-            res.render(process.cwd() + '/view/login-success', {username: req.body.username})
-        }else{
-            let invalid = "Password and confirm password does not match"
-            res.render(process.cwd() + '/view/index', {invalid: invalid})
-        }
-    })
+app.post('/login', passport.authenticate('local',{ failureRedirect: '/'}),(req, res) =>{
+    // res.redirect('/login-success')
+    // console.log(req.user)
+    res.render(process.cwd() + '/view/profile', {username: req.user.username})
 })
 
+let isSignedIn = (req, res, next) =>{
+    // res.render(process.cwd() + '/view/login-success')
+    if(req.isAuthenticated()){
+        console.log(req)
+        next()
+    }
+    res.redirect('/')
+}
+
+app.get('/profile',isSignedIn, (req, res) =>{
+    res.render(process.cwd() + '/view/profile', {username: req.user.username})
+})
 
 
 
