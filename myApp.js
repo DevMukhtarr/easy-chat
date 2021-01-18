@@ -14,7 +14,11 @@ const ObjectID = require('mongodb').ObjectID;
 app.set('views', './view');
 app.set('view engine', 'pug');
 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URI,{ 
+    useNewUrlParser: true, useUnifiedTopology: true 
+}).catch(() =>{
+    console.log('not able to connect to database')
+})
 
 //A schema for the Data i'll be receiving
 const usersSchema = new Schema({
@@ -110,6 +114,21 @@ app.post('/register', (req,res, next) =>{
 })
 
 //to login new users
+
+app.post('/login', (req, res, next) =>{
+    User.findOne({username: req.body.username}, (err, user) =>{
+        if(err){
+            next(err)
+        }else if(user){
+            res.render(process.cwd() + '/view/login-success', {username: req.body.username})
+        }else{
+            let invalid = "Password and confirm password does not match"
+            res.render(process.cwd() + '/view/index', {invalid: invalid})
+        }
+    })
+})
+
+
 
 
 
