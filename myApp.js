@@ -116,7 +116,7 @@ app.post('/register', (req,res, next) =>{
 
 //to login new users
 app.post('/login', passport.authenticate('local',{ failureRedirect: '/'}),(req, res) =>{
-    res.render(process.cwd() + '/view/profile', {username: req.user.username})
+    res.redirect('/profile')
 })
 
 //middleware to check if user has signed in before
