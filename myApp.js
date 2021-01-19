@@ -104,7 +104,7 @@ app.post('/register', (req,res, next) =>{
                     if(error){
                         res.redirect('/')
                     }else{
-                        return data
+                        console.log(data.username + ' registered succesfully')
                     }
                 })
 
@@ -115,24 +115,23 @@ app.post('/register', (req,res, next) =>{
 })
 
 //to login new users
-
 app.post('/login', passport.authenticate('local',{ failureRedirect: '/'}),(req, res) =>{
-    // res.redirect('/login-success')
-    // console.log(req.user)
     res.render(process.cwd() + '/view/profile', {username: req.user.username})
 })
 
+//middleware to check if user has signed in before
 let isSignedIn = (req, res, next) =>{
     // res.render(process.cwd() + '/view/login-success')
     if(req.isAuthenticated()){
-        console.log(req)
-        next()
+        //returning the next function
+        return next()
     }
     res.redirect('/')
 }
 
+//route to profile
 app.get('/profile',isSignedIn, (req, res) =>{
-    res.render(process.cwd() + '/view/profile', {username: req.user.username})
+   res.render(process.cwd() + '/view/profile', {username: req.user.username})
 })
 
 
