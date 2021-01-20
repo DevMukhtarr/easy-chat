@@ -62,11 +62,11 @@ passport.deserializeUser((id, done) =>{
 })
 
 passport.use(new LocalStrategy((username,password, done) =>{
-        User.findOne({username: username}, (err, user) =>{
-            if(err){
-                return done(err)
-            }
-            if(!user){
+    User.findOne({username: username}, (err, user) =>{
+        if(err){
+            return done(err)
+        }
+        if(!user){
                 return done(null, false)
             }
             if(!bcrypt.compareSync(password, user.password)){
@@ -113,9 +113,15 @@ app.post('/register', (req,res, next) =>{
         }
     })
 })
+//using flash
+app.get('/loginw', (req, res) =>{
+    let invalid = 'Username or password is incorrect'
+    res.render(process.cwd() + '/view/index', {invalid: invalid})
+})
+
 
 //to login new users
-app.post('/login', passport.authenticate('local',{ failureRedirect: '/'}),(req, res) =>{
+app.post('/login', passport.authenticate('local', {failureRedirect: '/loginw'}),(req, res) =>{
     res.redirect('/profile')
 })
 

@@ -9,11 +9,12 @@ body{
     font-size: 25px;
     color: burlywood;
     position: relative;
-    top: 60px;
+    margin-top: 10%;
+    margin-bottom: 4%;
     background-color: brown;
     padding: 10%;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
     word-spacing: 4px;
     border-radius: 5px;
 }
@@ -23,9 +24,9 @@ body{
     position: relative;
     background-color: brown;
     padding: 10%;
-    margin-top: 70px;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
     word-spacing: 4px;
     border-radius: 5px;
 }
