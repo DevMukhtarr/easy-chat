@@ -25,9 +25,24 @@ footer{
     justify-content: space-between;
     margin-right: 20%;
     margin-left: 20%;
-    margin-top: 5%;
+    margin-top: 3%;
     a i{
         transform: scale(1.5);
         color: black;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    footer{
+        display: flex;
+        height: 5vh;
+        justify-content: space-between;
+        margin-right: 20%;
+        margin-left: 20%;
+        margin-top: 5%;
+        a i{
+            transform: scale(1.5);
+            color: black;
+        }
     }
 }
