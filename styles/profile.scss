@@ -21,12 +21,13 @@ header{
 }
 footer{
     display: flex;
-    height: 10vh;
+    height: 5vh;
     justify-content: space-between;
     margin-right: 20%;
     margin-left: 20%;
     margin-top: 10%;
     a i{
         transform: scale(2.0);
+        color: black;
     }
 }

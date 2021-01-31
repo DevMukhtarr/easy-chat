@@ -38,7 +38,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 10vh;
+  height: 5vh;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -50,5 +50,6 @@ footer {
 footer a i {
   -webkit-transform: scale(2);
           transform: scale(2);
+  color: black;
 }
 /*# sourceMappingURL=profile.css.map */
