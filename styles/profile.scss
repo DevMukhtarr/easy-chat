@@ -10,10 +10,14 @@
 header{
     display: flex;
     justify-content: space-between;
-    padding: 5%;
-    a i{
-        transform: scale(2.0);
-        color: black;
+    // padding: 5%;
+    height: 10vh;
+    a, p{
+        padding: 5%;
+        i{
+            transform: scale(2.0);
+            color: black;
+        }
     }
 }
 .body-container{
@@ -21,7 +25,7 @@ header{
 }
 footer{
     display: flex;
-    height: 5vh;
+    height: 10vh;
     justify-content: space-between;
     margin-right: 20%;
     margin-left: 20%;
