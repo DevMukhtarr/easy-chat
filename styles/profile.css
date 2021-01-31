@@ -4,7 +4,7 @@
 }
 
 .page-container {
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,6 +12,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.body-container {
+  padding-bottom: 2.5rem;
 }
 
 header {
@@ -24,7 +28,7 @@ header {
 }
 
 header a, header p {
-  padding: 5%;
+  padding: 4%;
 }
 
 header a i, header p i {
@@ -47,6 +51,9 @@ footer {
   margin-right: 20%;
   margin-left: 20%;
   margin-top: 3%;
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;
 }
 
 footer a i {
