@@ -1,84 +1,17 @@
-* {
-  padding: 0;
-  margin: 0;
+.wrapper {
+  height: 90vh;
 }
 
-.page-container {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.body-container, .chat-content {
+  height: 50vh;
 }
 
-.body-container {
-  padding-bottom: 2.5rem;
+.footer-content a {
+  padding: 2%;
+  margin: 10%;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-header a, header p {
-  padding: 4%;
-}
-
-header a i, header p i {
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  color: black;
-}
-
-.body-container {
-  height: 80vh;
-}
-
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-right: 20%;
-  margin-left: 20%;
-  margin-top: 3%;
-  position: absolute;
-  bottom: 0;
-  height: 2.5rem;
-}
-
-footer a i {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  color: black;
-}
-
-@media only screen and (max-width: 320px) {
-  footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 5vh;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-right: 20%;
-    margin-left: 20%;
-    margin-top: 5%;
-  }
-  footer a i {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-    color: black;
-  }
+.send-message {
+  padding: 2%;
 }
 /*# sourceMappingURL=profile.css.map */

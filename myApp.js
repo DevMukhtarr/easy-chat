@@ -1,12 +1,13 @@
 const express = require('express');
 const app = express()
 const bodyParser = require('body-parser');
-require('dotenv').config()
+require('dotenv').config();
 const passport = require('passport');
 const session = require('express-session');
 const connect = require('./src/connect');
 const auth = require('./src/auth');
 const routes = require('./src/routes');
+
 
 
 app.set('views', './view');
@@ -39,4 +40,4 @@ app.use(auth)
 app.use(routes)
 
 
-module.exports = app
+module.exports = app;

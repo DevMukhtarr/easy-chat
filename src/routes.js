@@ -74,7 +74,19 @@ app.set('view engine', 'pug');
 
 //route to profile
     app.get('/profile',isSignedIn, (req, res) =>{
-        res.render(process.cwd() + '/view/profile', {username: req.user.username})
+        // res.render(process.cwd() + '/view/profile', {username: req.user.username})
+        res.render(process.cwd() + '/view/profile', {
+            other: true,
+            chat: false,
+        })
     })
+
+//routing to the chat page
+app.get('/chat', (req, res) =>{
+    res.render(process.cwd() + '/view/profile', {
+        chat: true,
+        other: false
+    })
+})
 
 module.exports = app
