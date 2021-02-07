@@ -26,15 +26,17 @@ let currentUsers = 0;
 
 //using socket.io
 io.on('connection', socket =>{
-      ++currentUsers;
-      console.log('a user has connected');
+    //currentUsers value is increased
+    ++currentUsers;
+    console.log('a user has connected');
       io.emit('users', {
         currentUsers,
         connected: true
       })
-
+      //when a user disconnects
       socket.on('disconnect', () =>{
-          console.log('a user has disconnected');
+        console.log('a user has disconnected');
+        //currentUsers value is decreased
           --currentUsers;
           io.emit('user', {
             currentUsers,
