@@ -27,9 +27,11 @@ html(lang="en")
             if chat
                 div.chat-content
                     p#num-users .
+                    .chat-box
                 div.send-message
-                    input(type="text", name="chat")
-                    button(type="submit") send
+                        form(action='')
+                            input#m(type="text", name="chat" autocomplete='off')
+                            button(type="submit") send
 
             footer
                 div.footer-content
