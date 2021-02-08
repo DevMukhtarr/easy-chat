@@ -7,7 +7,9 @@ const session = require('express-session');
 const connect = require('./src/connect');
 const auth = require('./src/auth');
 const routes = require('./src/routes');
-
+const MongoStore = require('connect-mongo')(session);
+const URI = process.env.MONGO_URI;
+const store = new MongoStore({ url: URI });
 
 
 app.set('views', './view');
@@ -30,6 +32,8 @@ app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: true,
     saveUninitialized: true,
+    key: 'express.id',
+    store: store,
     // cookie: {secure: true}
 }),passport.initialize(),passport.session())
 
