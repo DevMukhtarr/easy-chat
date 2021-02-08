@@ -1,5 +1,4 @@
 'use strict';
-// const http = require('http')
 const PORT = 5000;
 const express = require('express');
 const myApp = require('./myApp');
