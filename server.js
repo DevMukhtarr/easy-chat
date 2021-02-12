@@ -58,7 +58,7 @@ let currentUsers = 0;
 io.on('connection', socket =>{
       ++currentUsers;
       console.log('a user has connected');
-      console.log(socket.request.user)
+      // console.log(socket.request.user)
       io.emit('users', {
         currentUsers,
         connected: true

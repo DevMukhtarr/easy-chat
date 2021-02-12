@@ -1,17 +1,103 @@
-.wrapper {
-  height: 90vh;
-}
-
-.body-container, .chat-content {
-  height: 50vh;
-}
-
-.footer-content a {
-  padding: 2%;
-  margin: 10%;
-}
-
-.send-message {
-  padding: 2%;
+@media only screen and (max-width: 600px) {
+  body {
+    height: 97vh;
+    background-color: whitesmoke;
+  }
+  body .wrapper header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .wrapper header .head-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .wrapper header .head-content .fa-user {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    margin: 5px;
+  }
+  body .wrapper .body-container {
+    height: 80vh;
+    text-align: center;
+  }
+  body .wrapper .body-container .body-content .photo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .wrapper .body-container .body-content .photo-container img {
+    margin-bottom: 10%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  body .wrapper footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 90%;
+    background-color: black;
+    text-align: center;
+    padding: 5%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+  body .wrapper footer .footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .wrapper footer .footer-content a i {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    padding: 10px;
+    color: gray;
+    outline: 0;
+  }
+  body .wrapper .chat-content {
+    height: 70vh;
+    overflow: scroll;
+    border: transparent 1px solid;
+    border-radius: 5px;
+    background-color: white;
+  }
+  body .send-message form {
+    padding: 2%;
+  }
+  body .send-message form input {
+    padding: 2%;
+    border: transparent;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  body .send-message form button {
+    padding: 2%;
+    border: transparent;
+    background-color: transparent;
+  }
+  body .send-message form button i {
+    color: gray;
+    padding: 10%;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
 }
 /*# sourceMappingURL=profile.css.map */
