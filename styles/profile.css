@@ -1,3 +1,141 @@
+@font-face {
+  font-family: AlfaSlab;
+  src: url("/fonts/AlfaSlabOne-Regular.ttf");
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+body .wrapper header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .wrapper header p {
+  font-size: 30px;
+  font-family: AlfaSlab;
+}
+
+body .wrapper header .chat {
+  font-size: 30px;
+  font-family: AlfaSlab;
+}
+
+body .wrapper header .head-content a i {
+  -webkit-transform: scale(4);
+          transform: scale(4);
+  padding: 20px;
+  color: black;
+}
+
+body .wrapper header .head-content a i:hover {
+  color: #1f3a1f;
+}
+
+body .wrapper .body-container {
+  height: 80vh;
+  text-align: center;
+}
+
+body .wrapper .body-container .body-content .photo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+body .wrapper .body-container .body-content .photo-container img {
+  margin-bottom: 10%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+body .wrapper footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 97%;
+  background-color: black;
+  text-align: center;
+  padding: 2%;
+}
+
+body .wrapper footer .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+body .wrapper footer .footer-content a i {
+  -webkit-transform: scale(4);
+          transform: scale(4);
+  padding: 10px;
+  color: gray;
+  outline: 0;
+}
+
+body .wrapper footer .footer-content a i:hover {
+  color: #1f3a1f;
+}
+
+body .chat-content {
+  height: 60vh;
+  overflow: scroll;
+  border: transparent 1px solid;
+  border-radius: 5px;
+  background-color: white;
+}
+
+body .send-message form {
+  padding: 1%;
+}
+
+body .send-message form input {
+  padding: 1%;
+  border: transparent;
+  border-radius: 5px;
+}
+
+body .send-message form button {
+  padding: 1%;
+  border: transparent;
+  background-color: transparent;
+}
+
+body .send-message form button i {
+  color: gray;
+  padding: 10%;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+body .send-message form button i:hover {
+  color: gold;
+}
+
 @media only screen and (max-width: 600px) {
   body {
     height: 97vh;
