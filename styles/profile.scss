@@ -1,3 +1,119 @@
+@font-face{
+  font-family: AlfaSlab;
+  src: url('/fonts/AlfaSlabOne-Regular.ttf');
+}
+body{
+      background-color: whitesmoke;
+  .wrapper{
+    header{
+      display: flex;
+      justify-content: space-between;
+      p{
+        font-size: 30px;
+        font-family: AlfaSlab;
+      }
+      .chat{
+        font-size: 30px;
+        font-family: AlfaSlab;
+      }
+      .head-content{
+        a{
+          i{
+            transform: scale(4.0);
+            padding: 20px;
+            color: black;
+          }
+          i:hover{
+            color: rgb(31, 58, 31);
+          }
+        }
+      }
+    }
+    .body-container{
+      height: 80vh;
+      text-align: center;
+      .body-content{
+        .photo-container {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          justify-content: center;
+          margin-left: 15%;
+          margin-right: 15%;
+          img{
+            margin-bottom: 10%;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            margin-right: 5%;
+            margin-left: 5%;
+          }
+        }
+      }
+  }
+    footer{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 97%;
+        background-color: black;
+        text-align: center;
+        padding: 2%;
+        // border-top-left-radius: 50px;
+        // border-top-right-radius: 50px;
+      .footer-content{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10%;
+        margin-right: 10%;
+          a{
+            i{
+              transform: scale(4.0);
+              padding: 10px;
+              color: gray;
+              outline: 0;
+            }
+            i:hover{
+              color: rgb(31, 58, 31);
+            }
+          }
+      }
+    }
+  }
+  .chat-content{
+    height: 60vh;
+    overflow: scroll;
+    border: transparent 1px solid;
+    border-radius: 5px;
+    background-color: white;
+  }
+  .send-message{
+    form{
+      padding: 1%;
+      input{
+        padding: 1%;
+        border: transparent;
+        border-radius: 5px;
+      }
+      button{
+        padding: 1%;
+        border: transparent;
+        background-color: transparent;
+        i{
+          color: gray;
+          padding: 10%;
+          transform: scale(2.0);
+        }
+        i:hover{
+          color: gold;
+        }
+    }
+  }
+}
+}
+
+
 @media only screen and (max-width: 600px) {
   body{
       height: 97vh;
