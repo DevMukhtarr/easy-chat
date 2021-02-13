@@ -19,6 +19,5 @@ fetch(unsplashUrl)
             image.setAttribute('src', data[i].urls.small);
             image.setAttribute('loading', 'lazy')
             photoContainer.appendChild(image)
-            console.log(data[i].urls.raw)
         }
     })
