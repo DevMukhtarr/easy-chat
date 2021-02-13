@@ -35,7 +35,8 @@ io.use(
 )
 
 
-app.use(myApp)
+app.use(myApp);
+app.use('/fonts', express.static(process.cwd() + '/fonts'));
 app.set('views', './view');
 app.set('view engine', 'pug');
 app.use('/scripts', express.static(process.cwd() + '/scripts'))
@@ -67,7 +68,6 @@ io.on('connection', socket =>{
       })
       //when a user disconnects
       socket.on('disconnect', () =>{
-        //currentUsers value is decreased
           --currentUsers;
           io.emit('user', {
             currentUsers,
