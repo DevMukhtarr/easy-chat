@@ -1,7 +1,6 @@
     let selector = () =>{
     let searches = ['house','device','women','nature','men','animals','cartoon','tesla'];
     let randomNum = Math.floor(Math.random() * searches.length);
-        console.log(searches[randomNum])
         return searches[randomNum];
     }
     let selectorUp = selector()
