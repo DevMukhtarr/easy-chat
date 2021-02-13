@@ -89,4 +89,9 @@ app.get('/chat', (req, res) =>{
     })
 })
 
+//routing to the account page
+app.get('/account', (req, res) =>{
+    res.render(process.cwd() + '/view/account')
+})
+
 module.exports = app
